@@ -1,0 +1,114 @@
+/* Pastikan html dan body memenuhi layar */
+html,
+body {
+  background: url("index.bg.png");
+  background-size: cover; /* Menyesuaikan gambar agar sepenuhnya terlihat */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Atur main agar mengambil semua sisa ruang */
+main {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: rgb(140, 28, 173);
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+}
+footer p:first-child {
+  margin-bottom: 5px; /* Menambahkan jarak bawah pada paragraf pertama */
+}
+
+footer p:last-child {
+  margin-top: 3px; /* Menambahkan jarak atas pada paragraf kedua */
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar General Styles */
+.custom-navbar {
+  background-color: rgb(140, 28, 173); /* Latar belakang putih */
+  color: rgb(255, 255, 255); /* Warna teks hitam */
+  border-bottom: 2px solid #ddd; /* Garis bawah untuk navbar */
+  padding: 10px 15px; /* Spasi dalam */
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold; /* Teks tebal untuk merek */
+  font-size: 24px; /* Ukuran font merek */
+  color: rgb(255, 255, 255); /* Warna teks merek */
+  text-decoration: none; /* Menghapus garis bawah */
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #8f47a5; /* Warna biru saat hover */
+}
+
+.custom-navbar .navbar-toggler {
+  border: none; /* Menghapus border di tombol toggler */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: rgb(255, 255, 255); /* Warna teks tautan */
+  font-size: 16px; /* Ukuran font tautan */
+  margin-left: 10px; /* Jarak antar tautan */
+  text-decoration: none; /* Menghapus garis bawah tautan */
+  transition: color 0.3s; /* Efek transisi warna */
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #be6ad7; /* Warna biru saat hover */
+}
+
+/* Jumbotron Custom Styles */
+.custom-jumbotron {
+  text-align: center; /* Teks berada di tengah */
+  color: rgb(0, 0, 0); /* Warna teks */
+  padding: 3rem 3rem; /* Jarak internal */
+  background-color: rgba(210, 218, 227, 0.8); /* Warna dengan opacity */
+  border-radius: 10px; /* Membuat sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
+  max-width: 50%; /* Lebar maksimum jumbotron */
+  margin: 8rem auto; /* Mengatur posisi ke tengah */
+}
+.custom-jumbotron h1 {
+  font-size: 2.5rem; /* Ukuran font heading */
+  font-weight: bold; /* Teks tebal */
+  margin-bottom: 20px; /* Spasi bawah heading */
+}
+
+.custom-jumbotron p {
+  font-size: 1.25rem; /* Ukuran font paragraf */
+  margin-bottom: 30px; /* Spasi bawah paragraf */
+}
+
+.custom-jumbotron .btn {
+  font-size: 1.2rem; /* Ukuran font tombol */
+  padding: 10px 20px; /* Spasi dalam tombol */
+  border-radius: 5px; /* Membuat sudut melengkung tombol */
+  text-transform: uppercase; /* Mengubah teks tombol menjadi huruf kapital */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi */
+}
+
+.custom-jumbotron .btn:hover {
+  background-color: rgb(140, 28, 173); /* Warna biru lebih gelap saat hover */
+  color: white; /* Warna teks tetap putih */
+}
+
+/* CSS untuk navbar logo */
+.navbar-brand .logo {
+  width: 50px; /* Atur lebar logo */
+  height: auto; /* Menjaga proporsi gambar */
+}

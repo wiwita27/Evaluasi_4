@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orders - BookStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        background-image: url("orders.bg.png");
+        background-size: cover; /* Menyesuaikan gambar agar memenuhi seluruh area */
+        background-position: center; /* Memusatkan gambar di tengah */
+        background-repeat: no-repeat; /* Mencegah gambar terulang */
+      }
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="logo.png" alt="Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="orders.html">Orders</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Formulir Pemesanan -->
+    <div class="container my-4 flex-grow-1">
+      <div class="border p-2 rounded" style="background-color: rgb(140, 28, 173); margin: 0 auto; max-width: 450px">
+        <h1 class="text-center mb-4" style="color: white">Formulir Pemesanan</h1>
+        <form id="bookForm" class="mx-auto" style="max-width: 350px">
+          <div class="mb-3">
+            <label for="name" class="form-label" style="color: white">Nama</label>
+            <input type="text" class="form-control" id="name" name="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color: white">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="address" class="form-label" style="color: white">Alamat</label>
+            <input type="text" class="form-control" id="address" name="address" required />
+          </div>
+          <div class="mb-3">
+            <label for="bookTitle" class="form-label" style="color: white">Judul Buku</label>
+            <input type="text" class="form-control" id="bookTitle" name="bookTitle" required />
+          </div>
+          <div class="mb-3">
+            <label for="quantity" class="form-label" style="color: white">Jumlah Pembelian</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" required />
+          </div>
+          <button type="submit" class="btn w-100" style="background-color: #b74a1f; color: white; border: none">Kirim</button>
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 BookStore | Jalan Buku No. 1, Kota Literasi | Kontak: +62 812-3456-7890 | email@bookstore.com</p>
+        <p>
+          Sosial Media: <a href="#" class="text-black">Instagram</a> |
+          <a href="#" class="text-black">Facebook</a>
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzlR6e_OAtWeOEFBbxDwkOP5Obu9ooYe0ZxS-2fW5rg76NQL4eSqqD4tZ1l6b3NaDn9zA/exec";
+      const form = document.forms["bookForm"];
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
